@@ -1,0 +1,90 @@
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="auth-content">
+    <!--Logo-->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h4 no-margin>
+        <ion-text color="light">
+          KidsPlay
+          <!-- <ion-text color="secondary" class="fw700">{{'app.version'}}</ion-text> -->
+        </ion-text>
+
+      </h4>
+    </div>
+
+
+    <!--Register Form-->
+    <form [formGroup]="registerForm" class="list-form">
+      <!--Full Name-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="person" item-start></ion-icon>
+          Full Name
+        </ion-label>
+        <ion-input color="secondary" type="text" formControlName="fullName"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="registerForm.get('fullName').touched && registerForm.get('fullName').hasError('required')">
+        <ion-text color="danger">Full Name is required</ion-text>
+      </p>
+      <!--Family Name-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="person" item-start></ion-icon>
+          Family's Name
+        </ion-label>
+        <ion-input color="secondary" type="text" formControlName="familyName"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="registerForm.get('familyName').touched && registerForm.get('familyName').hasError('required')">
+        <ion-text color="danger">Family Name is required</ion-text>
+      </p>
+      <!--Email-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+          Email
+        </ion-label>
+        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="registerForm.get('email').touched && registerForm.get('email').hasError('required')">
+        <ion-text color="danger">Email is required</ion-text>
+      </p>
+      <!--Password-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>
+          Password
+        </ion-label>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="registerForm.get('password').touched && registerForm.get('password').hasError('required')">
+        <ion-text color="danger">Password is required</ion-text>
+      </p>
+      <!--Address-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="pin" item-start></ion-icon>
+          Address
+        </ion-label>
+        <ion-input color="secondary" type="text" formControlName="address"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="registerForm.get('address').touched && registerForm.get('address').hasError('required')">
+        <ion-text color="danger">Address is required</ion-text>
+      </p>
+    </form>
+    <!--End of form-->
+    <div margin-top>
+      <ion-button icon-left size="medium" expand="fill" shape="round" color="dark" (click)="register()" [disabled]="!registerForm.valid"
+        tappable>
+        <ion-icon name="log-in"></ion-icon>
+        Register
+      </ion-button>
+    </div>
+    <div text-center margin-top>
+      <span (click)="goToLogin()" tappable>
+        <ion-text color="light">
+          <strong>I have an account!</strong>
+        </ion-text>
+      </span>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="auth-content">
+    <!--Logo-->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h4 no-margin>
+        <ion-text color="light">
+          KidsPlay
+          <!-- <ion-text color="secondary" class="fw700">{{'app.version'}}</ion-text> -->
+        </ion-text>
+
+      </h4>
+    </div>
+    <!--Login Form-->
+    <form [formGroup]="loginForm" class="list-form">
+      <!--Email-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+          Email
+        </ion-label>
+        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('required')">
+        <ion-text color="danger">Email is required</ion-text>
+      </p>
+      <!--Password-->
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>
+          Password
+        </ion-label>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p class="text08" *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
+        <ion-text color="danger">Password is required</ion-text>
+      </p>
+    </form>
+    <!--End of form-->
+    <p text-right tappable (click)="forgotPassword()" class="paz">
+      <ion-text color="tertiary">
+        <strong>Forgot Password</strong>
+      </ion-text>
+    </p>
+    <div margin-top>
+      <ion-button icon-left size="medium" expand="fill" shape="round" color="dark" (click)="login()" [disabled]="!loginForm.valid"
+        tappable>
+        <ion-icon name="log-in"></ion-icon>
+        Login
+      </ion-button>
+
+    </div>
+    <div text-center margin-top>
+      <span (click)="goToRegister()" class="paz" tappable>
+        <ion-text color="light">
+          New here? <strong>Register</strong>
+        </ion-text>
+      </span>
+    </div>
+  </div>
+</ion-content>
