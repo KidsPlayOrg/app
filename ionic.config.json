@@ -1,5 +1,7 @@
 {
   "name": "kidsplay",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
