@@ -1,3 +1,28 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app >
+  <ion-split-pane >
+      <ion-menu type = "overlay">
+          <ion-header>
+            <ion-toolbar class ="menu-navbar" >
+              <ion-title color ="light"> Menu </ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          
+            <ion-content class = "menu-body-background2"  >
+              
+               <ion-list > 
+                <ion-menu-toggle auto-hide = "false" *ngFor= "let p of appMenu">
+                  <ion-item [routerDirection] ="'root'" [routerLink]="[p.url]">
+                    <ion-icon color = "primary" slot="start" [name] = "p.icon"></ion-icon>
+                    <ion-label color = "primary">{{p.title}}</ion-label>
+                  </ion-item>
+                </ion-menu-toggle>
+    
+               </ion-list>
+              
+            </ion-content>
+        </ion-menu>
+     <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+ 
 </ion-app>

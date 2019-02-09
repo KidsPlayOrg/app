@@ -1,0 +1,73 @@
+
+
+
+// gradient rgb colors go from right to left(dark to light) in scss but affect the 
+//navbar from light to dark from right to left.
+
+
+
+.cardblock1{
+    --background: linear-gradient(197deg, rgb(7, 80, 80) 5%, rgb(4, 97, 106) 25.5%, rgb(3, 88, 94) 63.33%, rgb(12, 121, 129) 80%) !important 
+}
+
+.formcard{
+    --background: linear-gradient(197deg, rgb(7, 75, 75) 5%, rgb(3, 67, 74) 25.5%, rgb(3, 69, 74) 63.33%, rgb(9, 93, 99) 80%) !important   
+    
+}
+
+
+.capword{
+
+    margin-top: 14px;
+
+}
+
+.eventword{
+
+    margin-top: 14px;
+}
+
+.fonttimecolor{
+
+    color: white;
+}
+
+.locate{
+
+    margin-top: -5px;
+
+}
+
+.descript{
+
+    margin-top: -5px;
+}
+
+
+.error-message{
+    font-size: 0.9em;
+    color: rgb(233, 196, 45);
+    text-align: center;
+    position: fixed;
+
+}
+
+
+
+// ion-card {
+//     position: relative;
+//     text-align: center;
+//     background-image: url('../../assets/icon/kidspic.jpg');
+//     background-attachment: fixed;
+//   }
+ 
+   
+
+  
+    // ion-card{
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: 100% !important;
+    //     margin: 0 !important;
+    //   }
+    

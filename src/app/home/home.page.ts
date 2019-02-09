@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  today = Date.now();
+
+
+  
+  constructor(){
+
+
+  }
+    
+  displayTime(){
+
+  return this.today; 
+  }
+
 }

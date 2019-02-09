@@ -1,1 +1,23 @@
+.body-background{
 
+    
+    --background: linear-gradient(197deg, rgb(9, 91, 91) 5%, rgb(9, 115, 123) 25.5%, rgb(10, 87, 92) 63.33%, rgb(27, 132, 140) 80%)!important
+}
+
+
+// gradient rgb colors go from right to left(dark to light) in scss but affect the 
+//navbar from light to dark from right to left.
+.navbar{
+
+    --background: linear-gradient(197deg, rgb(10, 90, 90) 5%, rgb(17, 155, 165) 25.5%, rgb(27, 216, 230) 63.33%, rgb(52, 241, 255) 80%) !important
+}
+
+
+.cardblock1{
+    --background: linear-gradient(197deg, rgb(7, 80, 80) 5%, rgb(4, 97, 106) 25.5%, rgb(3, 88, 94) 63.33%, rgb(12, 121, 129) 80%) !important 
+}
+
+.formcard{
+    background: linear-gradient(197deg, rgb(7, 75, 75) 5%, rgb(3, 67, 74) 25.5%, rgb(3, 69, 74) 63.33%, rgb(9, 93, 99) 80%) !important   
+       
+}

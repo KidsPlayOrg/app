@@ -1,0 +1,103 @@
+<ion-header>
+        <ion-toolbar class="navbar">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title color = "light">Events</ion-title>
+        </ion-toolbar>
+      </ion-header> 
+
+<ion-content class="body-background">
+  
+        <!-- Add an Event-->  
+   <ion-card class = "formcard" padding-bottom > 
+     <ion-card-content>
+
+        <form [formGroup] = "eventForm" class = "formlist" >    
+              <ion-item color = "clear" no-padding class = "forms-grouping">       
+                  <ion-icon color = "light" name="create" slot = "start"></ion-icon>
+                  <ion-label color = "light" position = "floating">Event Title</ion-label>
+                  <ion-input formControlName="eventTitle"  type = "text" color = "light" class = "eventword" ></ion-input>
+              </ion-item> 
+              <div class = "error-messages">
+                  <ng-container *ngFor= "let error of error_messages.eventTitle">
+                      <div class = "error-message" *ngIf= "eventForm.get('eventTitle').hasError(error.type) && (eventForm.get('eventTitle').dirty || eventForm.get('eventTitle').touched)">
+                        {{error.message}}
+                    </div>
+                </ng-container>
+              </div> 
+
+              
+                <ion-item  color = "clear" no-padding class = "forms-grouping">       
+                    <ion-icon color = "light" name="person-add" slot = "start"></ion-icon>                
+                        <ion-label   color = "light" position = "floating">Capacity</ion-label>
+                     <ion-input formControlName="capacity" type = "number" color = "light"  class = "capword" ></ion-input>
+                </ion-item> 
+                <div class = "error-messages">
+                        <ng-container *ngFor= "let error of error_messages.capacity">
+                            <div class = "error-message" *ngIf= "eventForm.get('capacity').hasError(error.type) && (eventForm.get('capacity').dirty || eventForm.get('capacity').touched)">
+                              {{error.message}}
+                          </div>
+                      </ng-container>
+                    </div> 
+              
+            <ion-item color = "clear" no-padding class = "forms-grouping">       
+                <ion-icon color = "light" name="map" slot = "start"></ion-icon>
+                <ion-label  color = "light" position = "floating">Location</ion-label>
+                <ion-textarea formControlName="location" spellcheck = "true" class = "locate" required = "true" color = "light"></ion-textarea>
+            </ion-item>  
+            <div class = "error-messages">
+                    <ng-container *ngFor= "let error of error_messages.location">
+                        <div class = "error-message" *ngIf= "eventForm.get('location').hasError(error.type) && (eventForm.get('location').dirty || eventForm.get('location').touched)">
+                          {{error.message}}
+                      </div>
+                  </ng-container>
+                </div> 
+
+                <ion-item color = "clear" no-padding class = "forms-grouping">       
+                    <ion-icon color = "light" name="document" slot = "start"></ion-icon>
+                    <ion-label  color = "light" position = "floating">Description</ion-label>
+                    <ion-textarea formControlName="description" required = "true" color = "light" class = "descript"></ion-textarea>
+                </ion-item> 
+                <div class = "error-messages">
+                        <ng-container *ngFor= "let error of error_messages.description">
+                            <div class = "error-message" *ngIf= "eventForm.get('description').hasError(error.type) && (eventForm.get('description').dirty || eventForm.get('description').touched)">
+                              {{error.message}}
+                          </div>
+                      </ng-container>
+                    </div> 
+                
+                <hr> 
+                <hr>
+                <ion-item color = "clear" no-padding class = "forms-grouping1">       
+                    <ion-icon color = "light" name="clock" slot = "start"></ion-icon>
+                      <ion-label color = "light">Date and Time</ion-label>
+                      <ion-datetime formControlName="date" min="2019" max="2021-10-31" class = "fonttimecolor" display-format="MMM DD, YYYY HH:mm" ></ion-datetime>               
+                 </ion-item> 
+                 <div class = "error-messages">
+                        <ng-container *ngFor= "let error of error_messages.date">
+                            <div class = "error-message" *ngIf= "eventForm.get('date').hasError(error.type) && (eventForm.get('date').dirty || eventForm.get('date').touched)">
+                              {{error.message}}
+                          </div>
+                      </ng-container>
+                    </div> 
+         </form>
+ 
+            
+
+    </ion-card-content>
+  </ion-card>        <!--choose time-->  
+        <ion-button [disabled] ="!eventForm.valid" fill = "outline" size = "default" shape="round" expand="full"  strong = "true" color="light" (click)="submit()">
+         Submit
+        </ion-button>
+
+
+
+  <!-- <ion-button href = '/newsfeed'>
+
+                   Butttont to news fdeed
+
+              </ion-button> -->
+     
+</ion-content>
+ 
