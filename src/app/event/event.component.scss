@@ -1,0 +1,37 @@
+// .body-background{ 
+   
+//     --background: linear-gradient(197deg, rgb(9, 91, 91) 5%, rgb(9, 115, 123) 25.5%, rgb(10, 87, 92) 63.33%, rgb(27, 132, 140) 80%)!important
+// }
+
+.event-body{
+
+    --background: linear-gradient(197deg, rgb(9, 91, 91) 5%, rgb(9, 115, 123) 25.5%, rgb(10, 87, 92) 63.33%, rgb(27, 132, 140) 80%)!important
+}
+
+ion-card {
+    position: relative;
+    text-align: left;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 40%;
+    font-size: 1.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+.badge-pos{
+    padding-left: 0%;
+    padding-top: 10%
+    
+}
+  

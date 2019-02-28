@@ -1,0 +1,33 @@
+
+
+ 
+  <ion-card> 
+    <ion-item lines = "none">
+      <ion-button (click) = "openPopover($event)"  fill = "clear">
+          <ion-icon name="more"></ion-icon>
+        </ion-button>
+      </ion-item>
+    <ion-card-content>
+      
+      <img src ="assets/icon/kidspic.jpg"/> 
+    </ion-card-content>
+
+      
+       <ion-item lines = "none"> Title: {{event.title}}</ion-item>
+       <ion-item lines = "none"> Location: {{event.location}}</ion-item>
+        <ion-item lines = "none">  Description: {{event.description}}</ion-item>
+        <ion-item lines = "none"> Capacity: {{event.capacity}}</ion-item>
+        <ion-item lines = "none">  Date: {{event.date | date}}</ion-item>
+  
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button (click) = "eventCount()">            
+            <ion-icon name="add"></ion-icon> 
+          </ion-fab-button>
+        <div class ="badge-pos">
+          <ion-badge color = " primary">
+              <ion-icon name="person"></ion-icon> {{capacityCount}} 
+          </ion-badge>
+        </div>
+    </ion-fab>
+            
+  </ion-card>

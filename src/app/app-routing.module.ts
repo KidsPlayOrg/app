@@ -11,7 +11,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'createevent', loadChildren: './createevent/createevent.module#CreateeventPageModule' },
-  { path: 'newsfeed', loadChildren: './newsfeed/newsfeed.module#NewsfeedPageModule' }
+  { path: 'newsfeed', loadChildren: './newsfeed/newsfeed.module#NewsfeedPageModule' },
+  { path: 'popover', loadChildren: './popover/popover.module#PopoverPageModule' },
+  { path: 'popsover', loadChildren: './popsover/popsover.module#PopsoverPageModule' }
+  // { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' }
   
 ];
 
